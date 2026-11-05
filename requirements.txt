@@ -1,0 +1,16 @@
+# Detection model v1 - tested with Python 3.11, ultralytics 8.4.163, mediapipe 1.0.1, opencv 5.0
+ultralytics>=8.4.0        # YOLOv8, YOLO11 and YOLO26 (YOLO26 needs 8.4+)
+mediapipe>=0.10.14        # Face Landmarker (Tasks API) with blendshapes
+opencv-python>=4.8        # solvePnP (SQPnP), video I/O, display window
+numpy
+pyyaml
+matplotlib                # figures (simulate_scenarios.py --plot)
+pytest
+
+# Optional, for benchmark_yolo.py export formats:
+#   onnx onnxruntime       -> --formats onnx
+#   (ncnn is installed automatically by ultralytics on first NCNN export)
+#   tensorflow             -> --formats tflite tflite_fp16 tflite_int8 (large download)
+#
+# Optional, for scripts/export_docx.py (Word versions of the chapters):
+#   pypandoc_binary python-docx
